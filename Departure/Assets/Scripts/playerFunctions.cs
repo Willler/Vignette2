@@ -12,6 +12,9 @@ public class playerFunctions : MonoBehaviour
     public string myText;
 
     public SpriteRenderer doorSprite;
+    public SpriteRenderer knobSprite;
+    public Text promptText;
+    public Text loreText;
 
 
     void Start()
@@ -23,14 +26,15 @@ public class playerFunctions : MonoBehaviour
     void Update()
     {
         myText = mainInputField.text;
-        if (myText == "open" || myText == "respond") 
+        if (myText == "respond") 
         {
             Debug.Log("it worked!");
             SceneManager.LoadScene("EyeScene", LoadSceneMode.Single);
         }
-        else
+        else if (myText == "waiting to be seen")
         {
-            Debug.Log(" Blerg!");
+            promptText.color = new Color(0.52f, 0f, 0f, 1f);
+            Debug.Log("door appears");
         }
 
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -44,7 +48,14 @@ public class playerFunctions : MonoBehaviour
         if (collision.gameObject.tag == "Door")
         {
             doorSprite.color = new Color(1f, 1f, 1f, 1f);
+            knobSprite.color = new Color(0f, 0f, 0f, 1f);
             Debug.Log("door appears");
+        }
+
+        if (collision.gameObject.tag == "Knob")
+        {
+            loreText.color = new Color(0.5f, 0f, 0f, 1f);
+            Debug.Log("lore appears");
         }
 
         if (collision.gameObject.tag == "killZone")

@@ -265,10 +265,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.4716981, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -861,7 +861,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 954e43bbf90b91548ac9ce0ea811e4f1, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1005,6 +1005,10 @@ PrefabInstance:
     - target: {fileID: 4343642943519227616, guid: 020dadaaa09e1cb428ae0678386cda9e, type: 3}
       propertyPath: m_Name
       value: Stitch (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343642943519227616, guid: 020dadaaa09e1cb428ae0678386cda9e, type: 3}
+      propertyPath: m_TagString
+      value: StitchLayer3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 020dadaaa09e1cb428ae0678386cda9e, type: 3}
@@ -1353,8 +1357,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288421948
-  m_fontColor: {r: 0.23373696, g: 0.1237985, b: 0.6132076, a: 1}
+    rgba: 4278517897
+  m_fontColor: {r: 0.5377358, g: 0, b: 0.020819662, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1447,7 +1451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 486256849218922123, guid: c5ed11bd91bb9074689dc61c371d6a6c, type: 3}
       propertyPath: m_TagString
-      value: StitchLayer3
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 542117592241940953, guid: c5ed11bd91bb9074689dc61c371d6a6c, type: 3}
       propertyPath: m_LocalPosition.x

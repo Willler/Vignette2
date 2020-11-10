@@ -12,6 +12,9 @@ TagManager:
   - StitchLayer2
   - StitchLayer3
   - StitchLayer4
+  - Lore Text
+  - PromptText
+  - Knob
   layers:
   - Default
   - TransparentFX
