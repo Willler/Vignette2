@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/DoorScene.unity
+    guid: 4ef47ca6101c43441859a91577f53006
+  - enabled: 1
     path: Assets/Scenes/EyeScene.unity
     guid: 606fe51cc1c70284eb689a9caee8d722
+  - enabled: 1
+    path: Assets/Scenes/AlignScene.unity
+    guid: bb624ddd47d2b0d4aa9f20c4f34f6660
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: bb28a6ff0f8bb8c4783d992f8a22df12
   m_configObjects: {}

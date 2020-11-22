@@ -21,7 +21,7 @@ public class StitchesBehavior : MonoBehaviour
     {
         myText = stitchesInputField.text;
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.anyKeyDown)
         {
             stitchesInputField.Select();
         }
@@ -29,18 +29,22 @@ public class StitchesBehavior : MonoBehaviour
         if (myText == "fear of the unknown")
         {
             Destroy(GameObject.FindWithTag("StitchLayer1"));
+            stitchesInputField.text = "";
 
         } else if (myText == "a placid island of ignorance")
         {
             Destroy(GameObject.FindWithTag("StitchLayer2"));
+            stitchesInputField.text = "";
         }
         else if (myText == "often paralyses memory")
         {
             Destroy(GameObject.FindWithTag("StitchLayer3"));
+            stitchesInputField.text = "";
         }
         else if (myText == "a seeker, a dreamer")
         {
             Destroy(GameObject.FindWithTag("StitchLayer4"));
+            stitchesInputField.text = "";
         }
     }
 }

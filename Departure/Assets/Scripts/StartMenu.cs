@@ -22,13 +22,14 @@ public class StartMenu : MonoBehaviour
     {
         myText = StartInputField.text;
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.anyKeyDown)
         {
             StartInputField.Select();
         }
 
-        if (myText == "begin")
+        if (myText == "begin" || myText == "Begin")
         {
+            StartInputField.text = "";
             SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
         }
     }

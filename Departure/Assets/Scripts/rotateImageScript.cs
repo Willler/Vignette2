@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class personMovement : MonoBehaviour
+public class rotateImageScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject backgroundCosmos;
+
+    public float zAngle;
     void Start()
     {
         
@@ -13,7 +15,6 @@ public class personMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x + 0.005f, transform.position.y);
+        backgroundCosmos.transform.Rotate(Vector3.forward * - 0.05f);
     }
-
 }
