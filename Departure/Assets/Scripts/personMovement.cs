@@ -13,7 +13,7 @@ public class personMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x + 0.005f, transform.position.y);
+        transform.position = new Vector2(transform.position.x + 0.0025f, transform.position.y);
     }
 
 }

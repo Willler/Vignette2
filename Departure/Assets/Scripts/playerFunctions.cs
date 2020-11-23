@@ -19,11 +19,14 @@ public class playerFunctions : MonoBehaviour
     private bool answeredPrompt;
     private bool loreAnswered;
 
+    private AudioSource correctInput;
+
 
     void Start()
     {
         answeredPrompt = false;
         loreAnswered = false;
+        correctInput = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,9 +36,11 @@ public class playerFunctions : MonoBehaviour
         if (myText == "respond" || myText == "Respond") 
         {
             Debug.Log("it worked!");
-            
+            correctInput.Play();
             mainInputField.text = "";
-            SceneManager.LoadScene("DoorScene", LoadSceneMode.Single);
+            StartCoroutine(doorTransition());
+            
+            
 
         }
         else if (myText == "waiting")
@@ -44,6 +49,7 @@ public class playerFunctions : MonoBehaviour
             loreAnswered = true;
             Debug.Log("prompt appears");
             mainInputField.text = "";
+            correctInput.Play();
         }
         else if (myText == "Ignore" || myText == "ignore")
         {
@@ -51,6 +57,7 @@ public class playerFunctions : MonoBehaviour
             loreText.color = new Color(0.5f, 0f, 0f, 0f);
             promptText.color = new Color(0.52f, 0f, 0f, 0f);
             mainInputField.text = "";
+            correctInput.Play();
         }
 
         if (Input.anyKeyDown)
@@ -84,7 +91,7 @@ public class playerFunctions : MonoBehaviour
 
         } else if (collision.gameObject.tag == "killZone" && answeredPrompt == true)
         {
-            SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("EndingScene2", LoadSceneMode.Single);
         }
     }
 
@@ -105,4 +112,9 @@ public class playerFunctions : MonoBehaviour
         }
     }
 
+    IEnumerator doorTransition()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("DoorScene", LoadSceneMode.Single);
+    }
 }

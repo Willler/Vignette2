@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 using System;
 public class PlayerEyeMovement : MonoBehaviour
 {
+
+    private AudioSource correctInput;
     // Start is called before the first frame update
     void Start()
     {
-        
+        correctInput = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,13 +31,14 @@ public class PlayerEyeMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        correctInput.Play();
         StartCoroutine(alignedSceneChange());
     }
 
     IEnumerator alignedSceneChange()
     {
         Debug.Log("Yes");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
     }
 }

@@ -11,9 +11,11 @@ public class DoorSceneScript : MonoBehaviour
     public InputField openDoorInputField;
     public string myText;
 
+    private AudioSource correctInput;
+
     void Start()
     {
-        
+        correctInput = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,12 +33,14 @@ public class DoorSceneScript : MonoBehaviour
 
         if (myText == "look beyond" || myText == "Look Beyond" || myText == "Look beyond")
         {
+            correctInput.Play();
             StartCoroutine(SceneChange());
 
         }
 
         if (myText == "back out" || myText == "Back Out")
         {
+            correctInput.Play();
             StartCoroutine(SceneEndChange());
         }
     }
