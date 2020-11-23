@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CosmosEyeMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -13,14 +13,17 @@ public class CosmosEyeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+       
+        transform.localScale += new Vector3(0.0001f, 0.0001f, 0);
+
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position = new Vector2(transform.position.x - 0.05f, transform.position.y);
+            transform.position = new Vector2(transform.position.x - 0.005f, transform.position.y);
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position = new Vector2(transform.position.x, transform.position.y - 0.05f);
+            transform.position = new Vector2(transform.position.x, transform.position.y - 0.005f);
         }
     }
 }

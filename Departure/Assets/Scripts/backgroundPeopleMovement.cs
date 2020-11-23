@@ -19,7 +19,7 @@ public class backgroundPeopleMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "killZone")
         {
-            transform.position = new Vector2(-8.75f, -2.6f);
+            transform.position = new Vector2(-8.75f, transform.position.y);
         }
     }
 }

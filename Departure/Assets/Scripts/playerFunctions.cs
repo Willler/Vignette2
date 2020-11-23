@@ -35,7 +35,7 @@ public class playerFunctions : MonoBehaviour
             Debug.Log("it worked!");
             
             mainInputField.text = "";
-            SceneManager.LoadScene("EyeScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("DoorScene", LoadSceneMode.Single);
 
         }
         else if (myText == "waiting")
